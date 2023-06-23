@@ -33,7 +33,7 @@ function renderData(city) {
   console.log(`Código do páis: ${country}`);
   getCoutries(country);
 
-  const windSpeed = city.wind.speed * 3.6;
+  const windSpeed = Math.round(city.wind.speed * 3.6);
   if (windSpeed === 0) console.log(`Não há vento agora.`);
   else console.log("Velocidade do vento: " + windSpeed + "km/h");
 
@@ -53,6 +53,13 @@ function renderData(city) {
   const cityName = city.name;
   console.log(`Cidade: ${cityName}. País: ${country}`);
 
+  const timestampSunrise = city.sys.sunrise;
+  const sunrise = new Date(timestampSunrise * 1000);
+  let hoursSunrise = sunrise.getHours();
+  let minutesSunrise = sunrise.getMinutes();
+  if (hoursSunrise >= 1 && hoursSunrise <= 9) hoursSunrise = `0${hoursSunrise}`;
+  if (minutesSunrise >= 1 && minutesSunrise <= 9) minutesSunrise = `0${minutesSunrise}`;
+  console.log(`${hoursSunrise}:${minutesSunrise}`);
   // document.querySelector("#infos").appendChild(createTemp);
 }
 
