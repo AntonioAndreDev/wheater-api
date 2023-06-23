@@ -60,6 +60,14 @@ function renderData(city) {
   if (hoursSunrise >= 1 && hoursSunrise <= 9) hoursSunrise = `0${hoursSunrise}`;
   if (minutesSunrise >= 1 && minutesSunrise <= 9) minutesSunrise = `0${minutesSunrise}`;
   console.log(`${hoursSunrise}:${minutesSunrise}`);
+
+  const timestampSunset = city.sys.sunset;
+  const Sunset = new Date(timestampSunset * 1000);
+  let hoursSunset = Sunset.getHours();
+  let minutesSunset = Sunset.getMinutes();
+  if (hoursSunset >= 1 && hoursSunset <= 9) hoursSunset = `0${hoursSunset}`;
+  if (minutesSunset >= 1 && minutesSunset <= 9) minutesSunset = `0${minutesSunset}`;
+  console.log(`${hoursSunset}:${minutesSunset}`);
   // document.querySelector("#infos").appendChild(createTemp);
 }
 
