@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(to bottom, #7e8cef 70%, #e1e2ff);
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: fit-content;
+}
+
+.weather-text {
+  display: block;
+}
+
+.forecast-text {
+  font-weight: 400;
+  font-size: 3.5rem;
+}
+
+h1 {
+  color: #ffffff;
+  font-size: 3rem;
+  text-align: center;
+  letter-spacing: 0.15rem;
+}
+
+img {
+  margin-bottom: 5rem;
+  width: 15rem;
+  height: auto;
+}
+
+button {
+  margin-top: 3rem;
+  background-color: #3c54e1;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #ffffff;
+  padding: 1rem 2.65rem;
+  border: none;
+  border-radius: 32px;
+  cursor: pointer;
+}
+
+button:hover {
+  scale: 1.05;
+  background: linear-gradient(to right, #3c54e1, #4d6fec);
+}
