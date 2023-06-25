@@ -45,7 +45,6 @@ function renderData(city) {
   const iconURL = `https://openweathermap.org/img/wn/${icon}@2x.png`;
   const imageIcon = document.createElement("img");
   imageIcon.src = iconURL;
-  document.querySelector("#infos").appendChild(imageIcon);
 
   const descriptionOfWeather = city.weather[0].description;
   console.log("Descrição do tempo: " + _.startCase(descriptionOfWeather));
@@ -68,7 +67,6 @@ function renderData(city) {
   if (hoursSunset >= 1 && hoursSunset <= 9) hoursSunset = `0${hoursSunset}`;
   if (minutesSunset >= 1 && minutesSunset <= 9) minutesSunset = `0${minutesSunset}`;
   console.log(`${hoursSunset}:${minutesSunset}`);
-  // document.querySelector("#infos").appendChild(createTemp);
 }
 
 getWeather();
