@@ -1,15 +1,29 @@
 async function getWeather(city) {
-  const urlWeather = `https://api.openweathermap.org/data/2.5/weather?q=${city}&lang=pt&appid=8e5c7d9600f1f4c9a13bba5e6777ce6b&units=metric`;
-  const req = await fetch(urlWeather);
-  const res = await req.json();
-  renderData(res);
+  try {
+    const urlWeather = `https://api.openweathermap.org/data/2.5/weather?q=${city}&lang=pt&appid=8e5c7d9600f1f4c9a13bba5e6777ce6b&units=metric`;
+    const req = await fetch(urlWeather);
+    if (!req.ok) {
+      throw new Error(`Por favor insira uma cidade válida. Por exemplo: Rio Branco`);
+    }
+    const res = await req.json();
+    renderData(res);
+  } catch (error) {
+    alert("Ocorreu um erro! " + error.message);
+  }
 }
 
 async function getCoutries(codeCountry) {
-  const urlCoutries = `https://restcountries.com/v3.1/alpha/${codeCountry}`;
-  const req = await fetch(urlCoutries);
-  const res = await req.json();
-  renderImage(res);
+  try {
+    const urlCountries = `https://restcountries.com/v3.1/alpha/${codeCountry}`;
+    const req = await fetch(urlCountries);
+    if (!req.ok) {
+      throw new Error("Erro ao bandeira do país");
+    }
+    const res = await req.json();
+    renderImage(res);
+  } catch (error) {
+    alert("Ocorreu um erro: " + error.message);
+  }
 }
 
 function renderImage(dataOfCountry) {
@@ -89,7 +103,7 @@ function renderData(city) {
   let hoursSunset = Sunset.getHours();
   let minutesSunset = Sunset.getMinutes();
   if (hoursSunset >= 1 && hoursSunset <= 9) hoursSunset = `0${hoursSunset}`;
-  if (minutesSunset >= 1 && minutesSunset <= 9) minutesSunset = `0${minutesSunset}`;
+  if (minutesSunset >= 0 && minutesSunset <= 9) minutesSunset = `0${minutesSunset}`;
   const sunsetHTML = document.getElementById("sunset");
   sunsetHTML.innerText = `${hoursSunset}:${minutesSunset}`;
   console.log(`${hoursSunset}:${minutesSunset}`);
