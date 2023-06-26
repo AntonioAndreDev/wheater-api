@@ -1,5 +1,20 @@
+function showLoading() {
+  const loadingElement = document.getElementById("loading");
+  const loaderElement = document.getElementById("loader");
+  loadingElement.style.display = "flex";
+  loaderElement.style.display = "flex";
+}
+
+function hideLoading() {
+  const loadingElement = document.getElementById("loading");
+  const loaderElement = document.getElementById("loader");
+  loadingElement.style.display = "none";
+  loaderElement.style.display = "none";
+}
+
 async function getWeather(city) {
   try {
+    showLoading();
     const urlWeather = `https://api.openweathermap.org/data/2.5/weather?q=${city}&lang=pt&appid=8e5c7d9600f1f4c9a13bba5e6777ce6b&units=metric`;
     const req = await fetch(urlWeather);
     if (!req.ok) {
@@ -9,11 +24,14 @@ async function getWeather(city) {
     renderData(res);
   } catch (error) {
     alert("Ocorreu um erro! " + error.message);
+  } finally {
+    hideLoading();
   }
 }
 
 async function getCoutries(codeCountry) {
   try {
+    showLoading();
     const urlCountries = `https://restcountries.com/v3.1/alpha/${codeCountry}`;
     const req = await fetch(urlCountries);
     if (!req.ok) {
@@ -23,6 +41,8 @@ async function getCoutries(codeCountry) {
     renderImage(res);
   } catch (error) {
     alert("Ocorreu um erro: " + error.message);
+  } finally {
+    hideLoading();
   }
 }
 
