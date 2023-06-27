@@ -21,81 +21,75 @@
         <input type="text" placeholder="Search city" autocomplete="off" id="inputCity" />
         <i class="fa-solid fa-magnifying-glass" id="searchIcon"></i>
       </div>
-      <img src="" alt="Flag of the country city" class="visibilityToggle" />
+      <img src="" alt="Flag of the country city" class="visibilityToggle" id="country" />
     </header>
 
     <div class="visibilityToggle">
       <main>
-        <h1 class="current-temperature">22°</h1>
+        <h1 class="current-temperature" id="curTemp">22°</h1>
         <div class="weather-description">
-          <h4>Cloudy</h4>
-          <i>icone</i>
+          <h4 id="descriptionWeather">Cloudy</h4>
+          <img src="" alt="Illustrative icon based on the current weather description of the searched city" id="icon" />
         </div>
       </main>
 
       <footer>
         <div>
           <div class="space-description">
-            <i class="fa-solid fa-umbrella icon-description"></i>
-            <strong>30%</strong>
-          </div>
-          <h5>Precipitation</h5>
-        </div>
-
-        <div>
-          <div class="space-description">
             <i class="fa-solid fa-droplet icon-description"></i>
-            <strong>30%</strong>
+            <strong id="humidity">30%</strong>
           </div>
-          <h5>Humidity</h5>
+          <h5>Umidade</h5>
         </div>
 
         <div>
           <div class="space-description">
             <i class="fa-solid fa-wind icon-description"></i>
-            <strong>12km/h</strong>
+            <strong id="wind">12km/h</strong>
           </div>
-          <h5>Wind Speed</h5>
+          <h5><span class="block">Velocidade</span>do Vento</h5>
         </div>
 
         <div>
           <div class="space-description">
             <i class="fa-solid fa-eye icon-description"></i>
-            <strong>10km</strong>
+            <strong id="visibility">10km</strong>
           </div>
-          <h5>Visibility</h5>
+          <h5>Visibilidade</h5>
         </div>
 
         <div>
           <div class="space-description">
             <i class="fa-solid fa-temperature-three-quarters icon-description"></i>
-            <strong>28°</strong>
+            <strong id="max">28°</strong>
           </div>
-          <h5><span class="block">Maximum</span> Temperature</h5>
+          <h5><span class="block">Temperatura</span>Máxima</h5>
         </div>
 
-        <div>
-          <div class="space-description">
-            <i class="fa-solid fa-temperature-quarter icon-description"></i>
-            <strong>18°</strong>
+        <div class="teste">
+          <div>
+            <div class="space-description">
+              <i class="fa-solid fa-temperature-quarter icon-description"></i>
+              <strong id="min">18°</strong>
+            </div>
+            <h5><span class="block">Temperatura</span>Mínima</h5>
           </div>
-          <h5><span class="block">Minimum</span> Temperature</h5>
-        </div>
 
-        <div>
-          <div class="space-description">
-            <i class="fa-solid fa-sun icon-description"></i>
-            <strong>05:47</strong>
+          <div>
+            <div class="space-description">
+              <i class="fa-solid fa-sun icon-description"></i>
+              <strong id="sunrise">05:47</strong>
+            </div>
+            <h5>Nascer do Sol</h5>
           </div>
-          <h5>Sunrise</h5>
-        </div>
 
-        <div>
-          <div class="space-description">
-            <i class="fa-solid fa-moon icon-description"></i>
-            <strong>22:00</strong>
+          <div>
+            <div class="space-description">
+              <i class="fa-solid fa-moon icon-description"></i>
+              <strong id="sunset">22:00</strong>
+            </div>
+            <h5>Pôr do Sol</h5>
           </div>
-          <h5>Sunset</h5>
         </div>
       </footer>
     </div>
