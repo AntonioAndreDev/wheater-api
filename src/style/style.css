@@ -113,3 +113,7 @@ strong {
 h4 {
   font-size: 1.5rem;
 }
+
+.visibilityToggle {
+  display: none;
+}
