@@ -16,8 +16,8 @@ input {
   font-weight: 700;
   font-size: 1.05rem;
   padding: 0.5rem;
-  cursor: pointer;
-  width: 12rem;
+  width: 7.5rem;
+  color: #1d178b;
 }
 
 body {
@@ -39,7 +39,10 @@ header {
 }
 
 .search {
+  display: flex;
   margin-right: 1rem;
+  align-items: center;
+  justify-content: center;
 }
 .search input {
   margin-left: 0.25rem;
@@ -50,9 +53,14 @@ header {
   color: #1d178b;
 }
 
-.fa-location-dot {
+.fa-location-dot,
+.fa-magnifying-glass {
   font-size: 1.25rem;
   color: #1d178b;
+}
+
+.fa-magnifying-glass {
+  cursor: pointer;
 }
 
 .current-temperature {

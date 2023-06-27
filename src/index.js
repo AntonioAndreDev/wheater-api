@@ -11,8 +11,6 @@ async function getCoutries(codeCountry) {
   const req = await fetch(urlCoutries);
   const res = await req.json();
   renderImage(res);
-
-  // document.querySelector("#infos").appendChild(image);
 }
 
 function renderImage(dataOfCountry) {
