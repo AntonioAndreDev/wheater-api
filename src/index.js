@@ -113,6 +113,7 @@ const searchIcon = document.getElementById("searchIcon");
 searchIcon.addEventListener("click", () => {
   let city = document.getElementById("inputCity");
   getWeather(city.value);
+  city.blur();
 });
 
 const input = document.getElementById("inputCity");
@@ -120,5 +121,6 @@ input.addEventListener("keydown", (ev) => {
   if (ev.key === "Enter") {
     let city = document.getElementById("inputCity");
     getWeather(city.value);
+    city.blur();
   }
 });
