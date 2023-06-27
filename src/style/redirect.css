@@ -59,3 +59,17 @@ button:hover {
   scale: 1.05;
   background: linear-gradient(to right, #3c54e1, #4d6fec);
 }
+
+@media (max-width: 360px) {
+  img {
+    width: 10rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .forecast-text {
+    font-size: 3rem;
+  }
+}
