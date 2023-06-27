@@ -1,6 +1,5 @@
-const urlWeather = "https://api.openweathermap.org/data/2.5/weather?q=rio%20branco&lang=pt&appid=8e5c7d9600f1f4c9a13bba5e6777ce6b&units=metric";
-
-async function getWeather() {
+async function getWeather(city) {
+  const urlWeather = `https://api.openweathermap.org/data/2.5/weather?q=${city}&lang=pt&appid=8e5c7d9600f1f4c9a13bba5e6777ce6b&units=metric`;
   const req = await fetch(urlWeather);
   const res = await req.json();
   renderData(res);
@@ -67,4 +66,9 @@ function renderData(city) {
   console.log(`${hoursSunset}:${minutesSunset}`);
 }
 
-getWeather();
+const searchIcon = document.getElementById("searchIcon");
+
+searchIcon.addEventListener("click", () => {
+  let city = document.getElementById("inputCity");
+  getWeather(city.value);
+});
