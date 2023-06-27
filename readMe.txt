@@ -1,0 +1,1 @@
+The sunrise and sunset information was removed due to a bug in the schedule. This bug will be addressed in the future.

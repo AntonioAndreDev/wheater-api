@@ -107,26 +107,6 @@ function renderData(city) {
 
   const cityName = city.name;
   console.log(`Cidade: ${cityName}. País: ${country}`);
-
-  const timestampSunrise = city.sys.sunrise;
-  const sunrise = new Date(timestampSunrise * 1000);
-  let hoursSunrise = sunrise.getHours();
-  let minutesSunrise = sunrise.getMinutes();
-  if (hoursSunrise >= 1 && hoursSunrise <= 9) hoursSunrise = `0${hoursSunrise}`;
-  if (minutesSunrise >= 1 && minutesSunrise <= 9) minutesSunrise = `0${minutesSunrise}`;
-  const sunriseHTML = document.getElementById("sunrise");
-  sunriseHTML.innerText = `${hoursSunrise}:${minutesSunrise}`;
-  console.log(`${hoursSunrise}:${minutesSunrise}`);
-
-  const timestampSunset = city.sys.sunset;
-  const Sunset = new Date(timestampSunset * 1000);
-  let hoursSunset = Sunset.getHours();
-  let minutesSunset = Sunset.getMinutes();
-  if (hoursSunset >= 1 && hoursSunset <= 9) hoursSunset = `0${hoursSunset}`;
-  if (minutesSunset >= 0 && minutesSunset <= 9) minutesSunset = `0${minutesSunset}`;
-  const sunsetHTML = document.getElementById("sunset");
-  sunsetHTML.innerText = `${hoursSunset}:${minutesSunset}`;
-  console.log(`${hoursSunset}:${minutesSunset}`);
 }
 
 const searchIcon = document.getElementById("searchIcon");

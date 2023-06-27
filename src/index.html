@@ -22,7 +22,7 @@
       <div class="search">
         <i class="fa-sharp fa-solid fa-location-dot"></i>
         <input type="text" placeholder="Search city" autocomplete="off" id="inputCity" />
-        <i class="fa-solid fa-magnifying-glass" id="searchIcon"></i>
+        <i tabindex="0" class="fa-solid fa-magnifying-glass" id="searchIcon"></i>
       </div>
       <img src="" alt="Flag of the country city" class="visibilityToggle" id="country" />
     </header>
@@ -61,37 +61,21 @@
           <h5>Visibilidade</h5>
         </div>
 
-        <div>
-          <div class="space-description">
-            <i class="fa-solid fa-temperature-three-quarters icon-description"></i>
-            <strong id="max">28°</strong>
+        <div class="center">
+          <div>
+            <div class="space-description">
+              <i class="fa-solid fa-temperature-three-quarters icon-description"></i>
+              <strong id="max">28°</strong>
+            </div>
+            <h5><span class="block">Temperatura</span>Máxima</h5>
           </div>
-          <h5><span class="block">Temperatura</span>Máxima</h5>
-        </div>
 
-        <div class="teste">
           <div>
             <div class="space-description">
               <i class="fa-solid fa-temperature-quarter icon-description"></i>
               <strong id="min">18°</strong>
             </div>
             <h5><span class="block">Temperatura</span>Mínima</h5>
-          </div>
-
-          <div>
-            <div class="space-description">
-              <i class="fa-solid fa-sun icon-description"></i>
-              <strong id="sunrise">05:47</strong>
-            </div>
-            <h5>Nascer do Sol</h5>
-          </div>
-
-          <div>
-            <div class="space-description">
-              <i class="fa-solid fa-moon icon-description"></i>
-              <strong id="sunset">22:00</strong>
-            </div>
-            <h5>Pôr do Sol</h5>
           </div>
         </div>
       </footer>
