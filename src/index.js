@@ -1,3 +1,5 @@
+import apiKey from "./scripts/config.js";
+
 function showLoading() {
   const loadingElement = document.getElementById("loading");
   const loaderElement = document.getElementById("loader");
@@ -15,7 +17,7 @@ function hideLoading() {
 async function getWeather(city) {
   try {
     showLoading();
-    const urlWeather = `https://api.openweathermap.org/data/2.5/weather?q=${city}&lang=pt&appid=8e5c7d9600f1f4c9a13bba5e6777ce6b&units=metric`;
+    const urlWeather = `https://api.openweathermap.org/data/2.5/weather?q=${city}&lang=pt&appid=${apiKey}&units=metric`;
     const req = await fetch(urlWeather);
     if (!req.ok) {
       throw new Error(`Por favor insira uma cidade válida. Por exemplo: Rio Branco`);
