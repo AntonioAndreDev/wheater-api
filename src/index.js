@@ -1,4 +1,5 @@
 import apiKey from "./scripts/config.js";
+import "./style/style.css";
 
 function showLoading() {
   const loadingElement = document.getElementById("loading");

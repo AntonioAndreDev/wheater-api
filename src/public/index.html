@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./imgs/logo.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./index.min.css" />
+    <title>Weather Forecast</title>
+  </head>
+  <body>
+    <div id="loading" class="loading-container">
+      <div class="loader" id="loader"></div>
+    </div>
+    <header>
+      <div class="search">
+        <i class="fa-sharp fa-solid fa-location-dot"></i>
+        <input type="text" placeholder="Search city" autocomplete="off" id="inputCity" />
+        <i tabindex="0" class="fa-solid fa-magnifying-glass" id="searchIcon"></i>
+      </div>
+      <img src="" alt="Flag of the country city" class="visibilityToggle" id="country" />
+    </header>
+
+    <div class="visibilityToggle">
+      <main>
+        <h1 class="current-temperature" id="curTemp">22°</h1>
+        <div class="weather-description">
+          <h4 id="descriptionWeather">Cloudy</h4>
+          <img src="" alt="Illustrative icon based on the current weather description of the searched city" id="icon" />
+        </div>
+      </main>
+
+      <footer>
+        <div>
+          <div class="space-description">
+            <i class="fa-solid fa-droplet icon-description"></i>
+            <strong id="humidity">30%</strong>
+          </div>
+          <h5>Umidade</h5>
+        </div>
+
+        <div>
+          <div class="space-description">
+            <i class="fa-solid fa-wind icon-description"></i>
+            <strong id="wind">12km/h</strong>
+          </div>
+          <h5><span class="block">Velocidade</span>do Vento</h5>
+        </div>
+
+        <div>
+          <div class="space-description">
+            <i class="fa-solid fa-eye icon-description"></i>
+            <strong id="visibility">10km</strong>
+          </div>
+          <h5>Visibilidade</h5>
+        </div>
+
+        <div class="center">
+          <div>
+            <div class="space-description">
+              <i class="fa-solid fa-temperature-three-quarters icon-description"></i>
+              <strong id="max">28°</strong>
+            </div>
+            <h5><span class="block">Temperatura</span>Máxima</h5>
+          </div>
+
+          <div>
+            <div class="space-description">
+              <i class="fa-solid fa-temperature-quarter icon-description"></i>
+              <strong id="min">18°</strong>
+            </div>
+            <h5><span class="block">Temperatura</span>Mínima</h5>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="./index.min.js" type="module"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+  </body>
+</html>
