@@ -127,3 +127,5 @@ input.addEventListener("keydown", (ev) => {
     city.blur();
   }
 });
+
+// God be praised
