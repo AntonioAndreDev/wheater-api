@@ -11,6 +11,8 @@ O Weather App utiliza as seguintes tecnologias e ferramentas:
 - npm (Node Package Manager) para gerenciamento de pacotes e instalação de dependências
 - Webpack para empacotamento e minificação de arquivos
 - Babel para transpilar o código JavaScript para melhor compatibilidade com os navegadores
+- Open Weather (API)
+- REST Countries (API)
 
 Uso
 - Abra o Weather App em seu navegador da web.
