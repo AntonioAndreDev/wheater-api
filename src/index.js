@@ -1,5 +1,4 @@
 import apiKey from "./scripts/config.js";
-import "./style/style.css";
 
 function showLoading() {
   const loadingElement = document.getElementById("loading");
@@ -17,6 +16,7 @@ function hideLoading() {
 
 async function getWeather(city) {
   try {
+    console.log(city);
     showLoading();
     const urlWeather = `https://api.openweathermap.org/data/2.5/weather?q=${city}&lang=pt&appid=${apiKey}&units=metric`;
     const req = await fetch(urlWeather);
@@ -114,17 +114,17 @@ function renderData(city) {
 
 const searchIcon = document.getElementById("searchIcon");
 searchIcon.addEventListener("click", () => {
-  let city = document.getElementById("inputCity");
-  getWeather(city.value);
-  city.blur();
+  let city = document.getElementById("inputCity").value.trim();
+  getWeather(city);
+  input.blur();
 });
 
 const input = document.getElementById("inputCity");
 input.addEventListener("keydown", (ev) => {
   if (ev.key === "Enter") {
-    let city = document.getElementById("inputCity");
-    getWeather(city.value);
-    city.blur();
+    let city = document.getElementById("inputCity").value.trim();
+    getWeather(city);
+    input.blur();
   }
 });
 
